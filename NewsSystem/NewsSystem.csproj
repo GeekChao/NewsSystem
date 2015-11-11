@@ -38,6 +38,17 @@
     <Content Include="Global.asax" />
     <Content Include="web.config" />
     <Content Include="Default.aspx" />
+    <Content Include="Web\css\bootstrap-theme.min.css" />
+    <Content Include="Web\css\bootstrap.min.css" />
+    <Content Include="Web\js\bootstrap.min.js" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Web\js\jquery-1.11.3.min.js" />
+    <Content Include="Web\index.aspx" />
+    <Content Include="Web\images\index_logo.png" />
+    <Content Include="Web\css\style.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -49,13 +60,30 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <MonoDevelop>
-      <Properties xmlns="">
+      <Properties>
         <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Web\" />
+    <Folder Include="Web\css\" />
+    <Folder Include="Web\js\" />
+    <Folder Include="Web\fonts\" />
+    <Folder Include="Web\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web\fonts\.DS_Store" />
+    <None Include="Web\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
 </Project>
