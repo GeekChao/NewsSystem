@@ -45,13 +45,15 @@
     <Content Include="Web\images\index_logo.png" />
     <Content Include="Web\css\style.css" />
     <Content Include="Web\searchResults.aspx" />
-    <Content Include="Web\images\search_logo.png" />
     <Content Include="Web\js\my.js" />
-    <Content Include="Web\NewsContent.aspx" />
     <Content Include="Web\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Web\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Web\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Web\images\suny_logo.png" />
+    <Content Include="Web\newsContent.aspx" />
+    <Content Include="Web\images\1.jpg" />
+    <Content Include="Web\newsManage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -76,10 +78,16 @@
       <DependentUpon>searchResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\NewsContent.aspx.cs">
-      <DependentUpon>NewsContent.aspx</DependentUpon>
+      <DependentUpon>newsContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\NewsContent.aspx.designer.cs">
-      <DependentUpon>NewsContent.aspx</DependentUpon>
+      <DependentUpon>newsContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\newsManage.aspx.cs">
+      <DependentUpon>newsManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\newsManage.aspx.designer.cs">
+      <DependentUpon>newsManage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

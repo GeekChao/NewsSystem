@@ -12,14 +12,14 @@
 	<div class="container">
 		<div class="row">
 	        <div class="col-md-12">
-	          <img class="img-responsive" src="images/search_logo.png">
+	          <img class="img-responsive" src="images/suny_logo.png">
 	        </div>
 	    </div>
 	    <div class="row">
-	        <div class="col-md-12">
-	          <h1>Search Results for + keywords</h1>
-	        </div>
-	    </div>
+			<div class="col-md-12">
+				<h1>Search Results for + keywords</h1>
+			</div>
+		</div>
 	    <div class="row">
 		    <div class="col-md-12">
 		    	<h3>Title</h3>

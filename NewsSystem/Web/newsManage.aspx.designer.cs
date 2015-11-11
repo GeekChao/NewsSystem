@@ -11,7 +11,7 @@
 namespace NewsSystem {
 	
 	
-	public partial class NewsContent {
+	public partial class newsManage {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 	}

@@ -31,9 +31,14 @@
 	        </div>
 	    </div>
 	    <div class="row">
+			<div class="col-md-12">
+				<h1>News and Announcements</h1>
+			</div>
+		</div>
+	    <div class="row">
           	<div class="col-md-4">
 			    <div class="thumbnail">
-			      <img class="img-responsive" src="images/1.jpg" alt="Entertainment">
+			      <img class="img-responsive" src="images/1.jpg" alt="Activity">
 			    </div>
 		    </div>
 		    <div class="col-md-8">
@@ -45,7 +50,7 @@
 	    <div class="row">
           	<div class="col-md-4">
 			    <div class="thumbnail">
-			      <img class="img-responsive" src="images/1.jpg" alt="Entertainment">
+			      <img class="img-responsive" src="images/1.jpg" alt="Academic">
 			    </div>
 		    </div>
 		    <div class="col-md-8">
@@ -57,7 +62,7 @@
 	    <div class="row">
           	<div class="col-md-4">
 			    <div class="thumbnail">
-			      <img class="img-responsive" src="images/1.jpg" alt="Entertainment">
+			      <img class="img-responsive" src="images/1.jpg" alt="Else">
 			    </div>
 		    </div>
 		    <div class="col-md-8">
