@@ -40,15 +40,18 @@
     <Content Include="Default.aspx" />
     <Content Include="Web\css\bootstrap.min.css" />
     <Content Include="Web\js\bootstrap.min.js" />
-    <Content Include="Web\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Web\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Web\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Web\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Web\js\jquery-1.11.3.min.js" />
     <Content Include="Web\index.aspx" />
     <Content Include="Web\images\index_logo.png" />
     <Content Include="Web\css\style.css" />
     <Content Include="Web\searchResults.aspx" />
+    <Content Include="Web\images\search_logo.png" />
+    <Content Include="Web\js\my.js" />
+    <Content Include="Web\NewsContent.aspx" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Web\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -72,6 +75,12 @@
     <Compile Include="Web\searchResults.aspx.designer.cs">
       <DependentUpon>searchResults.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web\NewsContent.aspx.cs">
+      <DependentUpon>NewsContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\NewsContent.aspx.designer.cs">
+      <DependentUpon>NewsContent.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -85,11 +94,10 @@
     <Folder Include="Web\" />
     <Folder Include="Web\css\" />
     <Folder Include="Web\js\" />
-    <Folder Include="Web\fonts\" />
     <Folder Include="Web\images\" />
+    <Folder Include="Web\fonts\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web\fonts\.DS_Store" />
     <None Include="Web\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
 </Project>
