@@ -89,6 +89,9 @@
     <Compile Include="Web\newsManage.aspx.designer.cs">
       <DependentUpon>newsManage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model\News.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\Category.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -104,6 +107,8 @@
     <Folder Include="Web\js\" />
     <Folder Include="Web\images\" />
     <Folder Include="Web\fonts\" />
+    <Folder Include="Model\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web\fonts\glyphicons-halflings-regular.woff2" />
