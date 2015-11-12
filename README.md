@@ -29,12 +29,12 @@ Role:
 		c. Delete news
 
 Webpage:
-	a. Index page {Login page(Alert:JS)}
+	a. Index page
 	c. NewsContenet page
 	d. NewsManage page
 	f. Search Results page
 
 Schema:
-a. News(news_id, news_title, news_date, news_text, news_img, news_cate_id);
+a. News(news_id, news_title, news_date, news_text, news_img_url, news_cate_id);
 b. Category(cate_id, cate_name);
 c. Comment(com_id, content, com_date, com_news_id);

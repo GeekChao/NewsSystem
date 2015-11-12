@@ -1,0 +1,1 @@
+DELETE FROM News WHERE news_id = 1;
