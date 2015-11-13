@@ -37,9 +37,6 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\Workspace\mysql-connector-net-6.9.8-noinstall\v4.5\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="FreeTextBox">
-      <HintPath>..\..\..\..\Downloads\FTBv3-2-1\Framework-3.5\FreeTextBox.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
