@@ -10,7 +10,8 @@
 	<title>News System</title>
 </head>
 <body>
-	<div class="container">
+	<form id="form1" runat="server">
+		<div class="container">
 		<div class="row">
 	        <div class="col-md-8">
 	          <img class="img-responsive" src="images/index_logo.png">
@@ -21,9 +22,9 @@
 				  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Admin
 				</button>
 	          	<div class="input-group">
-				  <input type="text" class="form-control" placeholder="Search for...">
+				  <input id="mSearchText" type="text" class="form-control" placeholder="Search for..." runat="server">
 				  <span class="input-group-btn">
-				    <button class="btn btn-default" type="button" onclick="searchBtnClick">
+				    <button class="btn btn-default" type="button" onserverclick="searchBtnClick" runat="server">
 				    	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 				    </button>
 				  </span>
@@ -71,11 +72,9 @@
 		    	<p>Content</p>
 		    </div>
 	    </div>
-
-	    <!-- Modal -->
+		<!--Modal
   		<div class="modal fade" id="myModal" role="dialog">
 	    	<div class="modal-dialog">
-		      <!-- Modal content-->
 		      <div class="modal-content">
 		        <div class="modal-header" style="padding:35px 50px;">
 		          <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -93,14 +92,13 @@
 		            </div>		    
 		              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
 		          </form>
-		        </div>
-	      	  </div>
-		   </div>
-	  	</div> 
-	</div>
+			        </div>
+		      	  </div>
+			   </div>
+		  	</div> 
+		  	-->
+		</div> 
 
-	<form id="form1" runat="server">
-	
 	</form>
 </body>
 </html>

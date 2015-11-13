@@ -12,16 +12,22 @@ namespace NewsSystem
 			Response.Redirect ("/Web/index.aspx");
 		}
 
-//		public void button1Clicked (object sender, EventArgs args)
-//		{
-//			button1.Text = "You clicked me";
-//			//Server.Transfer ("../Web/index.aspx", true);
-//
-//			NewsDAO mNewsDAO = new NewsDAO ();
-//			News mNews = new News ();
-//			mNewsDAO.selectByID ("SELECT * FROM News WHERE news_id = 1;", mNews);
-//			Console.WriteLine (mNews.toString());
-//		}
+		public void button1Clicked (object sender, EventArgs args)
+		{
+			Response.Write (searchText.Value);
+			//button1.Text = "You clicked me";
+			//Server.Transfer ("../Web/index.aspx", true);
+
+			NewsDAO mNewsDAO = new NewsDAO ();
+			News mNews = new News ();
+			mNewsDAO.selectByID ("SELECT * FROM News WHERE news_id = 1;", mNews);
+			Console.WriteLine (mNews.toString());
+		}
+
+		public void searchBtnClick(object sender, EventArgs e)
+		{
+			Response.Write (searchText.Value);
+		}
 	}
 }
 

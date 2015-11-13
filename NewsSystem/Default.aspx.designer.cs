@@ -14,5 +14,9 @@ namespace NewsSystem {
 	public partial class Default {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
+		
+		protected System.Web.UI.HtmlControls.HtmlInputText searchText;
+		
+		protected System.Web.UI.WebControls.Button button1;
 	}
 }

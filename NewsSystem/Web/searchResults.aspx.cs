@@ -9,7 +9,7 @@ namespace NewsSystem
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			String searchText = Request.QueryString["search"].ToString();
+			String searchText = Request.QueryString["search"];
 			Response.Write (searchText);
 		}
 		
