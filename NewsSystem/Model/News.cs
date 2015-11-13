@@ -6,7 +6,7 @@ namespace NewsSystem
 	{
 		private int newsId;
 		private String newsTitle;
-		private String newsDate;
+		private DateTime newsDate;
 		private String newsText;
 		private String newsImgUrl;
 		private int newsCateId;
@@ -15,7 +15,7 @@ namespace NewsSystem
 		{
 		}
 
-		public News (int newsId, String newsTitle, String newsDate, String newsText, String newsImgUrl, int newsCateId)
+		public News (int newsId, String newsTitle, DateTime newsDate, String newsText, String newsImgUrl, int newsCateId)
 		{
 			this.newsId = newsId;
 			this.newsTitle = newsTitle;
@@ -37,7 +37,7 @@ namespace NewsSystem
 			set{newsTitle = value;}
 		}
 
-		public String NewsDate
+		public DateTime NewsDate
 		{
 			get{return newsDate;}
 			set{newsDate = value;}
@@ -59,6 +59,12 @@ namespace NewsSystem
 		{
 			get{return newsCateId;}
 			set{newsCateId = value;}
+		}
+
+		public String toString()
+		{
+			return "ID:" + newsId + "\nTitle: " + newsTitle + "\nDate: " + newsDate
+			+ "\nText: " + newsText + "\nImg: " + newsImgUrl + "\nCategory: " + newsCateId;
 		}
 	}
 }

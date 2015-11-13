@@ -33,6 +33,10 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Workspace\mysql-connector-net-6.9.8-noinstall\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -54,6 +58,8 @@
     <Content Include="Web\newsContent.aspx" />
     <Content Include="Web\images\1.jpg" />
     <Content Include="Web\newsManage.aspx" />
+    <Content Include="Web\admin\UpdateNews.aspx" />
+    <Content Include="Web\admin\InsertNews.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -92,6 +98,21 @@
     <Compile Include="Model\News.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="DAL\SQLHelper.cs" />
+    <Compile Include="DAL\MySqlHelper.cs" />
+    <Compile Include="DAL\NewsDAO.cs" />
+    <Compile Include="Web\admin\UpdateNews.aspx.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\UpdateNews.aspx.designer.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\InsertNews.aspx.cs">
+      <DependentUpon>InsertNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\InsertNews.aspx.designer.cs">
+      <DependentUpon>InsertNews.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -109,6 +130,7 @@
     <Folder Include="Web\fonts\" />
     <Folder Include="Model\" />
     <Folder Include="DAL\" />
+    <Folder Include="Web\admin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web\fonts\glyphicons-halflings-regular.woff2" />

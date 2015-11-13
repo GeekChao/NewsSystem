@@ -13,7 +13,7 @@ CREATE TABLE Category(
 CREATE TABLE News(
 	news_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	news_title VARCHAR(100),
-	news_date DATE,
+	news_date DATETIME,
 	news_text TEXT,
 	news_img_url VARCHAR(100),
 	news_cate_id SMALLINT UNSIGNED NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Comment(
 	com_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	content TEXT,
 	thumb_num INT,
-	com_date DATE,
+	com_date DATETIME,
 	com_news_id SMALLINT UNSIGNED NOT NULL,
 	FOREIGN KEY(com_news_id) 
 		REFERENCES News(news_id),

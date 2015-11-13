@@ -7,14 +7,14 @@ namespace NewsSystem
 		private int comId;
 		private String content;
 		private int thumbNum;
-		private String comDate;
+		private DateTime comDate;
 		private int comNewsId;
 
 		public Comment ()
 		{
 		}
 
-		public Comment (int comId, String content, int thumbNum, String comDate, int comNewsId)
+		public Comment (int comId, String content, int thumbNum, DateTime comDate, int comNewsId)
 		{
 			this.comId = comId;
 			this.content = content;
@@ -41,7 +41,7 @@ namespace NewsSystem
 			set{ thumbNum = value;}
 		}
 
-		public String ComDate
+		public DateTime ComDate
 		{
 			get{ return comDate;}
 			set{ comDate = value;}
