@@ -22,22 +22,22 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h3>Title</h3>
+				<h3><%# mNews.NewsTitle%></h3>
 			</div>
 		</div>
 	    <div class="row">
 			<div class="col-md-12">
-		    	<p>Category + Date</p>
+		    	<p><%# mNews.NewsDate%></p>
 		    </div>
 		</div>
 		<div class="row">
 		   <div class="col-md-12">
-		   		<img class="img-responsive img-max" src="images/1.jpg">
+		   		<img class="img-responsive img-max" src="<%# mNews.NewsImgUrl%>">
 		   </div>
 		</div>
 		<div class="row">
 		   <div class="col-md-12">
-		   		<p>Content</p>
+		   		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# mNews.NewsText%></p>
 		   </div>
 	    </div>
 	    <div class="row">

@@ -2,20 +2,16 @@
 
 ##Week One:
 	1. Requirements Analysis
-	2. Creating UML
-	3. Learn Html/Css/Js
+	2. Learn Html/Css/Js
+	3. Set up development environment
 
 ##Week Two
-	1. Construct the structure of webpage(View Layer)
-	2. Learn C# & Asp.net
+	1. Learn C# & Asp.net
+	2. Develope News System
 
 ##Week Three:
-	1.Database manipulation
-	2.C# & Asp.net programming
-
-##Week Four:
-	1.Test 
-	2.Deploy
+	1.Test the system
+	2.Deploy the system
 
 ##Role:
 	User: 

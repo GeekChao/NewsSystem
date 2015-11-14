@@ -44,7 +44,7 @@
 			    </div>
 		    </div>
 		    <div class="col-md-8">
-				<h3> <a href='newsContent.aspx?newsid=<%# mHotActNews.NewsId%>' target="_blank" title='<%# mHotActNews.NewsTitle%>'><%# StringTruncat(mHotActNews.NewsTitle.ToString(), 40, "...") %></a></h3>
+				<h3> <a href='newsContent.aspx?newsId=<%# mHotActNews.NewsId%>' target="_blank" title='<%# mHotActNews.NewsTitle%>'><%# StringTruncat(mHotActNews.NewsTitle.ToString(), 40, "...") %></a></h3>
 				<p>Activity <%# mHotActNews.NewsDate%><p>
 		    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(mHotActNews.NewsText),800)%></p>
 		    </div>
