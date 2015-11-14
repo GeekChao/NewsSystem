@@ -36,16 +36,18 @@
 				<h1>News and Announcements</h1>
 			</div>
 		</div>
+
 	    <div class="row">
           	<div class="col-md-4">
 			    <div class="thumbnail">
-			      <img class="img-responsive" src="images/1.jpg" alt="Activity">
+			      <img class="img-responsive" src="<%# mHotActNews.NewsImgUrl%>" alt="Activity">
 			    </div>
 		    </div>
 		    <div class="col-md-8">
-		    	<h3>Title</h3>
-		    	<p>Category + Date</p>
-		    	<p>Content</p>
+				 <h3> <a href='newsContent.aspx?newsid=<%# mHotActNews.NewsId%>' target="_blank" title='<%# mHotActNews.NewsTitle%>'><%# StringTruncat(mHotActNews.NewsTitle.ToString(), 40, "...") %></a></h3>
+		    	<asp:Label runat="server" Text="<%# mHotActNews.NewsDate%>"></asp:Label>
+		    	<br>&nbsp;&nbsp;&nbsp;&nbsp
+                <asp:Label runat="server" Text="<%# GetWords(striphtml(mHotActNews.NewsText),800)%>">&quot;&gt;</asp:Label>
 		    </div>
 	    </div>
 	    <div class="row">

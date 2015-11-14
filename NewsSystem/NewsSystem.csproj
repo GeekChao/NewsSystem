@@ -139,6 +139,7 @@
     <Content Include="Web\js\tinymce\skins\lightgray\img\object.gif" />
     <Content Include="Web\js\tinymce\skins\lightgray\img\trans.gif" />
     <Content Include="Web\js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Web\images\Diwali.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
