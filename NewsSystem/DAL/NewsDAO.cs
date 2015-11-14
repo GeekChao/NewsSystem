@@ -17,7 +17,7 @@ namespace NewsSystem
 			mDbcon = mInstance.Dbcon;
 		}
 
-		public void selectByID(String sql, News mNews)
+		public void exectueQuery(String sql, News mNews)
 		{
 			mDbcmd = mDbcon.CreateCommand ();
 			mDbcmd.CommandText = sql;
@@ -31,9 +31,39 @@ namespace NewsSystem
 				mNews.NewsImgUrl = (String)mReader["news_img_url"];
 				mNews.NewsCateId = (ushort)mReader["news_cate_id"];
 			}
+			Console.Write (mNews.toString());
 			cleanUp ();
 		}
 
+		public void selectHotNews(String category, News mNews)
+		{
+			String sql = "SELECT * FROM News INNER JOIN Comment ON com_news_id = news_id INNER JOIN Category C1 ON cate_id = news_cate_id WHERE cate_name = '";
+			switch (category) 
+			{
+			case News.ACTIVITY:
+				sql = sql + News.ACTIVITY + "' ORDER BY thumb_num DESC LIMIT 1;";
+				exectueQuery (sql, mNews);
+				Console.Write (sql);
+				break;
+			case News.ACADEMIC:
+				sql = sql + News.ACADEMIC +  "' ORDER BY thumb_num DESC LIMIT 1;";
+				exectueQuery (sql, mNews);
+				break;
+			case News.ELSE:
+				sql = sql + News.ELSE +  "' ORDER BY thumb_num DESC LIMIT 1;";
+				exectueQuery (sql, mNews);
+				break;
+			default:
+				break;
+			}
+		}
+
+		public void selectByID(String sql, News mNews)
+		{
+			exectueQuery (sql, mNews);
+		}
+
+		//release resources
 		private void cleanUp()
 		{
 			if (mReader != null) {

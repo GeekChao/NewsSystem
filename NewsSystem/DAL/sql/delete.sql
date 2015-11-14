@@ -1,1 +1,1 @@
-DELETE FROM News WHERE news_id = 1;
+DELETE FROM News WHERE news_id = 6;

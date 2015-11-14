@@ -29,7 +29,7 @@ CREATE TABLE Comment(
 	com_date DATETIME,
 	com_news_id SMALLINT UNSIGNED NOT NULL,
 	FOREIGN KEY(com_news_id) 
-		REFERENCES News(news_id),
+		REFERENCES News(news_id) ON DELETE CASCADE,
 	PRIMARY key(com_id)
 );
 

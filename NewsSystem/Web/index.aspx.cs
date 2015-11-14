@@ -15,12 +15,12 @@ namespace NewsSystem
 		{
 			NewsDAO mNewsDAO = new NewsDAO ();
 			// get hotest activity news
-			mNewsDAO.selectByID ("SELECT * FROM News WHERE news_id = 1;", mHotActNews);
-			Response.Write (mHotActNews.NewsImgUrl);
+			mNewsDAO.selectHotNews(News.ACTIVITY, mHotActNews);
 			// get hotest academic news
-			//mNewsDAO.selectByID ("SELECT * FROM News WHERE news_id = 1;", mHotAcaNews);
+			mNewsDAO.selectHotNews(News.ACADEMIC, mHotAcaNews);
 			//get hotest else news
-			//mNewsDAO.selectByID ("SELECT * FROM News WHERE news_id = 1;", mHotElseNews);
+			mNewsDAO.selectHotNews(News.ELSE, mHotElseNews);
+
 			this.DataBind();
 		}
 
