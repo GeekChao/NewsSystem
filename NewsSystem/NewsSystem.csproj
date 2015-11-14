@@ -56,7 +56,6 @@
     <Content Include="Web\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Web\images\suny_logo.png" />
     <Content Include="Web\newsContent.aspx" />
-    <Content Include="Web\images\1.jpg" />
     <Content Include="Web\newsManage.aspx" />
     <Content Include="Web\admin\UpdateNews.aspx" />
     <Content Include="Web\admin\InsertNews.aspx" />
@@ -193,6 +192,7 @@
     <Compile Include="Web\admin\InsertNews.aspx.designer.cs">
       <DependentUpon>InsertNews.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utility\ProcessData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -212,6 +212,7 @@
     <Folder Include="DAL\" />
     <Folder Include="Web\admin\" />
     <Folder Include="Web\js\tinymce\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web\fonts\glyphicons-halflings-regular.woff2" />

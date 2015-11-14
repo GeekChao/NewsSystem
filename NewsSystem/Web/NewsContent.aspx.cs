@@ -11,11 +11,13 @@ namespace NewsSystem
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			NewsDAO mNewsDAO = new NewsDAO ();
-			String newsId = Request.QueryString ["newsId"];
-			String sql = "SELECT * FROM News WHERE news_id = " + newsId + ";";
-			mNewsDAO.exectueQuery (sql, mNews);
-			this.DataBind ();
+			if (!Page.IsPostBack) {
+				NewsDAO mNewsDAO = new NewsDAO ();
+				String newsId = Request.QueryString ["newsId"];
+				String sql = "SELECT * FROM News WHERE news_id = " + newsId + ";";
+				mNewsDAO.exectueQuery (sql, mNews);
+				this.DataBind ();
+			}
 		}
 	}
 }

@@ -17,16 +17,20 @@
 	    </div>
 	    <div class="row">
 			<div class="col-md-12">
-				<h1>Search Results for + keywords</h1>
+				<h1>Search Results for <%= searchText%></h1>
 			</div>
 		</div>
-	    <div class="row">
-		    <div class="col-md-12">
-		    	<h3>Title</h3>
-		    	<p>Category + Date</p>
-		    	<p>Content</p>
-		    </div>
-	    </div>
+		<asp:Repeater ID="repSearchResult" runat="server">       
+	    	<ItemTemplate>
+			    <div class="row">
+				    <div class="col-md-12">
+				    	<h3> <a href='newsContent.aspx?newsId=<%#Eval("news_id")%>' target="_blank" title='<%#Eval("news_title")%>'><%# StringTruncat(Eval("news_title").ToString(), 40, "...") %></a></h3>
+				    	<p><%#Eval("news_date")%></p>
+				    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(Eval("news_text").ToString()),600)%></p>
+				    </div>
+			    </div>
+			 </ItemTemplate>
+		</asp:Repeater>
 	</div>
 
 	<form id="form1" runat="server">

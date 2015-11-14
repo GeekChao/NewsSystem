@@ -13,6 +13,8 @@ namespace NewsSystem {
 	
 	public partial class searchResults {
 		
+		protected System.Web.UI.WebControls.Repeater repSearchResult;
+		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 	}
 }

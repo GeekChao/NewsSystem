@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 
 namespace NewsSystem
@@ -31,7 +32,17 @@ namespace NewsSystem
 				mNews.NewsImgUrl = (String)mReader["news_img_url"];
 				mNews.NewsCateId = (ushort)mReader["news_cate_id"];
 			}
-			Console.Write (mNews.toString());
+			//Console.Write (mNews.toString());
+			cleanUp ();
+		}
+
+		public void searchNews(String sql, Repeater rep)
+		{
+			mDbcmd = mDbcon.CreateCommand ();
+			mDbcmd.CommandText = sql;
+			mReader = mDbcmd.ExecuteReader ();
+			rep.DataSource = mReader;
+			rep.DataBind ();
 			cleanUp ();
 		}
 
