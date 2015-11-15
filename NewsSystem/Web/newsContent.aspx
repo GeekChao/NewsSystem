@@ -9,7 +9,8 @@
 	<title>News Content</title>
 </head>
 <body>
-	<div class="container">
+	<form id="form1" runat="server">
+		<div class="container">
 		<div class="row">
 	        <div class="col-md-12">
 	          <img class="img-responsive" src="images/suny_logo.png">
@@ -42,17 +43,16 @@
 	    </div>
 	    <div class="row">
 	    	<div class="col-md-12">
-		    	 <button type="button" class="btn btn-default" aria-label="Left Align">
+		    	 <button type="button" class="btn btn-default" aria-label="Left Align" runat="server" onserverclick="thumbsUpBtnClick">
 					  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
 					</button>
-					<button type="button" class="btn btn-default" aria-label="Left Align">
+					<button type="button" class="btn btn-default" aria-label="Left Align" runat="server" onserverclick="thumbsDownBtnClick">
 					  <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
 				</button>
 			</div>
 	    </div>
 	</div>
 
-	<form id="form1" runat="server">
 	</form>
 </body>
 </html>

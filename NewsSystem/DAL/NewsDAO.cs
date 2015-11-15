@@ -88,6 +88,14 @@ namespace NewsSystem
 			bindReapter (sql, rep);
 		}
 
+		public void updateByID(String sql)
+		{
+			mDbcmd = mDbcon.CreateCommand ();
+			mDbcmd.CommandText = sql;
+			mReader = mDbcmd.ExecuteReader ();
+			cleanUp ();
+		}
+
 		//release resources
 		private void cleanUp()
 		{

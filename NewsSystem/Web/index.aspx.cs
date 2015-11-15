@@ -13,7 +13,6 @@ namespace NewsSystem
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if (!Page.IsPostBack) {
 				NewsDAO mNewsDAO = new NewsDAO ();
 				// get hotest activity news
 				mNewsDAO.selectHotNews (News.ACTIVITY, mHotActNews);
@@ -23,7 +22,6 @@ namespace NewsSystem
 				mNewsDAO.selectHotNews (News.ELSE, mHotElseNews);
 
 				this.DataBind ();
-			}
 		}
 
 		public void searchBtnClick(object sender, EventArgs e)

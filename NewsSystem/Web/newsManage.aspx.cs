@@ -17,17 +17,12 @@ namespace NewsSystem
 
 		public void initNewsManage()
 		{
-			String sql = "SELECT * FROM News";
+			String sql = "SELECT * FROM News ORDER BY news_date;";
 			NewsDAO mNewsDAO = new NewsDAO ();
 			mNewsDAO.selectAll (sql, repNewsManage);	
 		}
 
-		public void modifyNewsBtn(object sender, EventArgs e)
-		{
-			
-		}
-
-		public void deleteNewsBtn(object sender, EventArgs e)
+		public void deleteNewsBtnClick(object sender, EventArgs e)
 		{
 			String id = ((LinkButton)sender).CommandArgument;
 			String sql = "DELETE FROM NEWS WHERE news_id = " + id + ";";
@@ -37,7 +32,7 @@ namespace NewsSystem
 
 		}
 
-		public void addNewsBtn(object sender, EventArgs e)
+		public void addNewsBtnClick(object sender, EventArgs e)
 		{
 			Response.Redirect ("./admin/insertNews.aspx");
 		}

@@ -36,7 +36,7 @@
 				</div>-->
 		    </div>
 		    <div class="col-md-4">
-		    	<button type="button" class="btn btn-info btn-lg" runat="server" onserverclick="addNewsBtn">
+		    	<button type="button" class="btn btn-info btn-lg" runat="server" onserverclick="addNewsBtnClick">
 				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add News
 				</button>
 		    </div>
@@ -53,7 +53,7 @@
 			    		<a href='./admin/updateNews.aspx?newsId=<%#Eval("news_id")%>'>
 			    		<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modify</a>
 			    		&nbsp;&nbsp;&nbsp;
-						<asp:LinkButton id="delteBtn" class="button" runat="server" OnClick="deleteNewsBtn" CommandArgument='<%#Eval("news_id")%>'>
+						<asp:LinkButton id="delteBtn" class="button" runat="server" OnClick="deleteNewsBtnClick" CommandArgument='<%#Eval("news_id")%>'>
 						<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Delete</asp:LinkButton>
 				    </div>
 				</ItemTemplate>

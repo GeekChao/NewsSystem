@@ -100,9 +100,9 @@ Assemblyman John T. McDonald III said, “The participation of SUNY Polytechnic 
 CDTA will provide bus service to SUNY Poly CNSE via new Fuller Road bus stops, which were constructed this past summer.  Four existing routes (#114, #117, #190, and #712) were expanded to serve the new stops.  A map detailing the revised routes is included.',
 'images/CDTA.png', 3);
 
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 20);
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(3, 21);
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(5, 22);
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 23);
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(1, 24);
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 25);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 26);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(3, 27);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(5, 28);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 29);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(1, 30);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 31);
