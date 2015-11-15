@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Inherits="NewsSystem.insertNews" %>
+﻿<%@ Page Language="C#" Inherits="NewsSystem.insertNews" ValidateRequest="false"%>
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -8,8 +8,11 @@
 	<script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">
         tinymce.init({
-            selector: "#mytextarea",
+            selector: "#mTextArea",
             plugins: ["image autosave"],
+            toolbar: "insertfile undo redo | sizeselect | bold italic | fontselect |  fontsizeselect | link image",
+            fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+            height: "270",
         });
     </script>
 	<title>InsertNews</title>
@@ -41,20 +44,20 @@
    					 <h4><span class="label label-info">&nbsp;Category &nbsp;</span></h4>
 				</div>
 				<div class="col-md-10">
-		    		<label class="radio-inline"><input type="radio" name="optradio">Activity</label>
-					<label class="radio-inline"><input type="radio" name="optradio">Academic</label>
-					<label class="radio-inline"><input type="radio" name="optradio">Else</label>
+					<asp:RadioButton id="radAct" runat="server"  Text=" Activity" Checked="true" GroupName="Category"/>&nbsp;&nbsp;
+					<asp:RadioButton id="radAca" runat="server"  Text=" Academic" GroupName="Category"/>&nbsp;&nbsp;
+					<asp:RadioButton id="radElse" runat="server" Text=" Else" GroupName="Category"/>
 		    	</div>
 		    	<br><br><br>
 			</div>
 		    <div class="row">
 			    <div class="col-md-10">
-					<textarea id="mytextarea">Easy! You should check out MoxieManager!</textarea>
+					<textarea id="mTextArea" runat="server">Insert News Content</textarea>
 			    </div>
 		    </div>
 		    <div class="row">
 				<div class="col-md-12">
-  					<input type="submit" class="btn btn-warning" value="Submit">
+  					<input type="submit" class="btn btn-warning" value="Submit" runat="server" onserverclick="btnSubmitClick">
 			    </div>		   
 			</div>
 		</div>
