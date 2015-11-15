@@ -57,8 +57,6 @@
     <Content Include="Web\images\suny_logo.png" />
     <Content Include="Web\newsContent.aspx" />
     <Content Include="Web\newsManage.aspx" />
-    <Content Include="Web\admin\UpdateNews.aspx" />
-    <Content Include="Web\admin\InsertNews.aspx" />
     <Content Include="Web\js\tinymce\tinymce.min.js" />
     <Content Include="Web\js\tinymce\plugins\advlist\plugin.min.js" />
     <Content Include="Web\js\tinymce\plugins\anchor\plugin.min.js" />
@@ -139,6 +137,8 @@
     <Content Include="Web\js\tinymce\skins\lightgray\img\trans.gif" />
     <Content Include="Web\js\tinymce\themes\modern\theme.min.js" />
     <Content Include="Web\images\Diwali.png" />
+    <Content Include="Web\admin\insertNews.aspx" />
+    <Content Include="Web\admin\updateNews.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -180,19 +180,19 @@
     <Compile Include="DAL\SQLHelper.cs" />
     <Compile Include="DAL\MySqlHelper.cs" />
     <Compile Include="DAL\NewsDAO.cs" />
-    <Compile Include="Web\admin\UpdateNews.aspx.cs">
-      <DependentUpon>UpdateNews.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Web\admin\UpdateNews.aspx.designer.cs">
-      <DependentUpon>UpdateNews.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Web\admin\InsertNews.aspx.cs">
-      <DependentUpon>InsertNews.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Web\admin\InsertNews.aspx.designer.cs">
-      <DependentUpon>InsertNews.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Utility\ProcessData.cs" />
+    <Compile Include="Web\admin\insertNews.aspx.cs">
+      <DependentUpon>insertNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\insertNews.aspx.designer.cs">
+      <DependentUpon>insertNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\updateNews.aspx.cs">
+      <DependentUpon>updateNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\updateNews.aspx.designer.cs">
+      <DependentUpon>updateNews.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

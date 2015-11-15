@@ -1,3 +1,22 @@
+/*Activity*/
+INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
+VALUES('DIWALI-The Festival of Lights', '2015-11-04 17:27:58', 'Diwali, one of the most important holidays on the Hindu calendar, is a time of reflection and contemplation of the past year, and a celebration of the new year to come. A festival of lights lasting five days, Diwali represents the triumph of good over evil and light over darkness. Holiday traditions include the lighting of special lamps and candles through the night, and the exchanging of gifts (usually sweets) to relatives and neighbors, wearing new clothes and lighting firecrackers.
+It is an official holiday in India, Nepal, Sri Lanka, Trinidad and Tobago, Malaysia and Singapore.
+My best wishes to you and your family for a new year filled with good health, happiness and prosperity. Happy Diwali to all, and may you join ISA members and friends on Friday, Nov. 13 at 6:00 pm in Kunsela Lecture Hall and Rm A129, for an evening of Indian singing, dancing, food, and celebration.',
+'images/Diwali.png', 1);
+
+INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
+VALUES('Campus Hosts Regional Innovation Challenge Event', '2015-03-16 20:13:28', 'Students from SUNY Polytechnic Institute and other area colleges competed over the course of two days to create innovative solutions to the area most challenging social and economic issues. The inaugural “Innovation Challenge New York: Mohawk Valley,” supported by a grant from the Community Foundation of Herkimer and Oneida Counties, was hosted October 24-25 by the Utica campus of SUNY Poly.
+
+The theme was “Harnessing the DIY (Do it Yourself) spirit to build community, economic, and cultural sustainability in the Mohawk Valley.” The intent was to launch an annual student competition that will take ideas and transform them into actions, improving the quality of life in the region.
+
+Last spring, Robert Edgell, assistant professor of business, took four students to Philadelphia to take part in an “Innovation Challenge” event in which student teams competed to help a region solve its social, environmental or economic problems in new, fresh and innovative ways. Inspired by the experience, Edgell decided to bring that same forward-thinking to the Mohawk Valley.
+
+“There is growing consensus in Herkimer and Oneida Counties that many of our brightest minds, educated locally, tend to migrate to other regions of the state or nation in search of economic and personal growth opportunities. In addition to this ‘brain drain,’ others are concerned about the lack of economic opportunities and entrepreneurial activity,” Edgell said. “This event brought students together with local DIY experts to help students become more entrepreneurial while increasing their propensity to remain in and be engaged with local communities. We also anticipate increased entrepreneurial activity, greater satisfaction with life in the area and increased area attractiveness to visitors and would-be residents.”
+
+The 2014 Innovation Challenge New York: Mohawk Valley was led by SUNY Poly faculty Robert Edgell, assistant professor of business management; Daryl Lee, associate professor of communication and humanities; and Temple University’s James Moustafellos.',
+'images/InnovationChallengeEvent.png', 1);
+
 /*Academic*/
 INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
 VALUES('Join us for the Social Justice workshop of the semester!', '2015-10-15 17:27:58', 'Hello!
@@ -7,8 +26,6 @@ The event will be taking place on Tuesday, October 6th beginning at 1 PM in the 
 Should you have any questions, please do not hesitate to contact me at Alyssa.Napolitano@sunyit.edu.
 Thank you!',
 'images/Social.png', 2);
-
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(10, 5);
 
 INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
 VALUES('Geometry and Symmetry based Mathematical and Computational Methods with Applications in Engineering, Science and Education ', '2015-11-15 17:27:58', 'Confirmed Participants
@@ -49,31 +66,6 @@ Mathematical Physics, especially Integrable Systems and Symmetries in Physics. S
 Daniel Yaciuk (SUNY Poly Utica, Math Major), Misha Yermakov (Suny Poly Albany) and other students.',
 'images/Math.png', 2);
 
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(9, 7);
-
-/*Activity*/
-INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
-VALUES('DIWALI-The Festival of Lights', '2015-11-04 17:27:58', 'Diwali, one of the most important holidays on the Hindu calendar, is a time of reflection and contemplation of the past year, and a celebration of the new year to come. A festival of lights lasting five days, Diwali represents the triumph of good over evil and light over darkness. Holiday traditions include the lighting of special lamps and candles through the night, and the exchanging of gifts (usually sweets) to relatives and neighbors, wearing new clothes and lighting firecrackers.
-It is an official holiday in India, Nepal, Sri Lanka, Trinidad and Tobago, Malaysia and Singapore.
-My best wishes to you and your family for a new year filled with good health, happiness and prosperity. Happy Diwali to all, and may you join ISA members and friends on Friday, Nov. 13 at 6:00 pm in Kunsela Lecture Hall and Rm A129, for an evening of Indian singing, dancing, food, and celebration.',
-'images/Diwali.png', 1);
-
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(1, 1);
-
-INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
-VALUES('Campus Hosts Regional Innovation Challenge Event', '2015-03-16 20:13:28', 'Students from SUNY Polytechnic Institute and other area colleges competed over the course of two days to create innovative solutions to the area most challenging social and economic issues. The inaugural “Innovation Challenge New York: Mohawk Valley,” supported by a grant from the Community Foundation of Herkimer and Oneida Counties, was hosted October 24-25 by the Utica campus of SUNY Poly.
-
-The theme was “Harnessing the DIY (Do it Yourself) spirit to build community, economic, and cultural sustainability in the Mohawk Valley.” The intent was to launch an annual student competition that will take ideas and transform them into actions, improving the quality of life in the region.
-
-Last spring, Robert Edgell, assistant professor of business, took four students to Philadelphia to take part in an “Innovation Challenge” event in which student teams competed to help a region solve its social, environmental or economic problems in new, fresh and innovative ways. Inspired by the experience, Edgell decided to bring that same forward-thinking to the Mohawk Valley.
-
-“There is growing consensus in Herkimer and Oneida Counties that many of our brightest minds, educated locally, tend to migrate to other regions of the state or nation in search of economic and personal growth opportunities. In addition to this ‘brain drain,’ others are concerned about the lack of economic opportunities and entrepreneurial activity,” Edgell said. “This event brought students together with local DIY experts to help students become more entrepreneurial while increasing their propensity to remain in and be engaged with local communities. We also anticipate increased entrepreneurial activity, greater satisfaction with life in the area and increased area attractiveness to visitors and would-be residents.”
-
-The 2014 Innovation Challenge New York: Mohawk Valley was led by SUNY Poly faculty Robert Edgell, assistant professor of business management; Daryl Lee, associate professor of communication and humanities; and Temple University’s James Moustafellos.',
-'images/InnovationChallengeEvent.png', 1);
-
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(4, 4);
-
 
 /*Else*/
 INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
@@ -87,8 +79,6 @@ On November 14 SUNY Poly CMOST will open its doors at no cost during this event 
 
 Or maybe they’ll follow in the footsteps of SUNY Maritime alumni Scott Kelly, and explore space, getting that much closer to the stars.',
 'images/Starwars.png', 3);
-
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(1, 2);
 
 INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
 VALUES('SUNY Poly To Provide Universal Access to CDTA Route Network', '2015-11-02 7:10:34', 'Albany, NY SUNY Polytechnic Institute, on behalf of its Colleges of Nanoscale Science and Engineering (SUNY Poly CNSE), and in partnership with the Capital District Transportation Authority (CDTA), today announced it has joined the popular Universal Access program to provide unlimited rides on CDTA services to students, faculty and staff at no cost effective Monday, November 2, 2015.  The free service addresses increased demand for access to SUNY Poly CNSE’s Nanotech complex while reducing the potential for impact on traffic patterns in and around its facilities off Fuller Road in Albany.  The Universal Access program includes CDTA’s regular route services offering over 50 routes and connections throughout the region, STAR paratransit service and Northway Xpress (NX) Commuter service.
@@ -110,4 +100,9 @@ Assemblyman John T. McDonald III said, “The participation of SUNY Polytechnic 
 CDTA will provide bus service to SUNY Poly CNSE via new Fuller Road bus stops, which were constructed this past summer.  Four existing routes (#114, #117, #190, and #712) were expanded to serve the new stops.  A map detailing the revised routes is included.',
 'images/CDTA.png', 3);
 
-INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 3);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 20);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(3, 21);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(5, 22);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 23);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(1, 24);
+INSERT INTO Comment(thumb_num, com_news_id) VALUES(2, 25);

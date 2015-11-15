@@ -15,7 +15,7 @@ namespace NewsSystem
 				NewsDAO mNewsDAO = new NewsDAO ();
 				String newsId = Request.QueryString ["newsId"];
 				String sql = "SELECT * FROM News WHERE news_id = " + newsId + ";";
-				mNewsDAO.exectueQuery (sql, mNews);
+				mNewsDAO.selectByID (sql, mNews);
 				this.DataBind ();
 			}
 		}

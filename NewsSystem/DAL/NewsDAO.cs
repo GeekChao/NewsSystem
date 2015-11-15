@@ -18,7 +18,7 @@ namespace NewsSystem
 			mDbcon = mInstance.Dbcon;
 		}
 
-		public void exectueQuery(String sql, News mNews)
+		private void exectueQuery(String sql, News mNews)
 		{
 			mDbcmd = mDbcon.CreateCommand ();
 			mDbcmd.CommandText = sql;
@@ -36,7 +36,7 @@ namespace NewsSystem
 			cleanUp ();
 		}
 
-		public void searchNews(String sql, Repeater rep)
+		private void bindReapter(String sql, Repeater rep)
 		{
 			mDbcmd = mDbcon.CreateCommand ();
 			mDbcmd.CommandText = sql;
@@ -44,6 +44,16 @@ namespace NewsSystem
 			rep.DataSource = mReader;
 			rep.DataBind ();
 			cleanUp ();
+		}
+
+		public void selectAll(String sql, Repeater rep)
+		{
+			bindReapter (sql, rep);
+		}
+
+		public void searchNews(String sql, Repeater rep)
+		{
+			bindReapter (sql, rep);
 		}
 
 		public void selectHotNews(String category, News mNews)
@@ -54,7 +64,6 @@ namespace NewsSystem
 			case News.ACTIVITY:
 				sql = sql + News.ACTIVITY + "' ORDER BY thumb_num DESC LIMIT 1;";
 				exectueQuery (sql, mNews);
-				Console.Write (sql);
 				break;
 			case News.ACADEMIC:
 				sql = sql + News.ACADEMIC +  "' ORDER BY thumb_num DESC LIMIT 1;";
@@ -72,6 +81,11 @@ namespace NewsSystem
 		public void selectByID(String sql, News mNews)
 		{
 			exectueQuery (sql, mNews);
+		}
+
+		public void deleteByID(String sql, Repeater rep)
+		{
+			bindReapter (sql, rep);
 		}
 
 		//release resources

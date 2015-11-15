@@ -5,7 +5,7 @@ using System.Web.UI;
 namespace NewsSystem
 {
 	
-	public partial class UpdateNews
+	public partial class updateNews
 	{
 		
 	}

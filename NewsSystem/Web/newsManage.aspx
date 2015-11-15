@@ -9,7 +9,8 @@
 	<title>News Content</title>
 </head>
 <body>
-	<div class="container">
+	<form id="form1" runat="server">
+		<div class="container">
 		<div class="row">
 	        <div class="col-md-12">
 	          <img class="img-responsive" src="images/suny_logo.png">
@@ -22,7 +23,7 @@
 		</div>
 	    <div class="row">
 		    <div class="col-md-8">
-		    	<div class="dropdown">
+		    	<!--<div class="dropdown">
 				  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				    Category
 				    <span class="caret"></span>
@@ -32,32 +33,34 @@
 				    <li><a href="#">Academic</a></li>
 				    <li><a href="#">Else</a></li>
 				  </ul>
-				</div>
+				</div>-->
 		    </div>
 		    <div class="col-md-4">
-		    	<button type="button" class="btn btn-info btn-lg">
+		    	<button type="button" class="btn btn-info btn-lg" runat="server" onserverclick="addNewsBtn">
 				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add News
 				</button>
 		    </div>
 	    </div>
 	    <div class="row">
-	    	<div class="col-md-8">
-	    		<p>Title</p>
-	    		<p>Date</p>
-	    	</div>
-	    	<div class="col-md-4">
-		    	<button type="button" class="btn btn-warning btn-sm">
-				  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modify
-				</button>
-				<button type="button" class="btn btn-danger btn-sm">
-				  <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Remove
-				</button>
-		    </div>
+		    <asp:Repeater ID="repNewsManage" runat="server">       
+		    	<ItemTemplate>
+				    <div class="col-md-8">
+					    <h3><%# StringTruncat(Eval("news_title").ToString(), 55, "...") %></h3>
+					    <p><%#Eval("news_date")%></p>
+			    	</div>
+			    	<div class="col-md-4">
+			    		<br>
+			    		<a href='./admin/updateNews.aspx?newsId=<%#Eval("news_id")%>'>
+			    		<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modify</a>
+			    		&nbsp;&nbsp;&nbsp;
+						<asp:LinkButton id="delteBtn" class="button" runat="server" OnClick="deleteNewsBtn" CommandArgument='<%#Eval("news_id")%>'>
+						<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Delete</asp:LinkButton>
+				    </div>
+				</ItemTemplate>
+			</asp:Repeater>    	
 	    </div>
 	</div>
 
-	<form id="form1" runat="server">
-	
 	</form>
 </body>
 </html>

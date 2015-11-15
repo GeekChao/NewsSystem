@@ -44,7 +44,7 @@
 			    </div>
 		    </div>
 		    <div class="col-md-8">
-				<h3> <a href='newsContent.aspx?newsId=<%# mHotActNews.NewsId%>' target="_blank" title='<%# mHotActNews.NewsTitle%>'><%# StringTruncat(mHotActNews.NewsTitle.ToString(), 40, "...") %></a></h3>
+				<h3> <a href='newsContent.aspx?newsId=<%# mHotActNews.NewsId%>' target="_blank" title='<%# mHotActNews.NewsTitle%>'><%# StringTruncat(mHotActNews.NewsTitle.ToString(), 80, "...") %></a></h3>
 				<p>Activity <%# mHotActNews.NewsDate%><p>
 		    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(mHotActNews.NewsText),800)%></p>
 		    </div>
@@ -56,7 +56,7 @@
 			    </div>
 		    </div>
 		    <div class="col-md-8">
-				<h3> <a href='newsContent.aspx?newsid=<%# mHotAcaNews.NewsId%>' target="_blank" title='<%# mHotAcaNews.NewsTitle%>'><%# StringTruncat(mHotAcaNews.NewsTitle.ToString(), 40, "...") %></a></h3>
+				<h3> <a href='newsContent.aspx?newsid=<%# mHotAcaNews.NewsId%>' target="_blank" title='<%# mHotAcaNews.NewsTitle%>'><%# StringTruncat(mHotAcaNews.NewsTitle.ToString(), 80, "...") %></a></h3>
 				<p>Academic <%# mHotAcaNews.NewsDate%><p>
 		    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(mHotAcaNews.NewsText),800)%></p>
 		    </div>
@@ -68,7 +68,7 @@
 			    </div>
 		    </div>
 		    <div class="col-md-8">
-				<h3> <a href='newsContent.aspx?newsid=<%# mHotElseNews.NewsId%>' target="_blank" title='<%# mHotElseNews.NewsTitle%>'><%# StringTruncat(mHotElseNews.NewsTitle.ToString(), 40, "...") %></a></h3>
+				<h3> <a href='newsContent.aspx?newsid=<%# mHotElseNews.NewsId%>' target="_blank" title='<%# mHotElseNews.NewsTitle%>'><%# StringTruncat(mHotElseNews.NewsTitle.ToString(), 80, "...") %></a></h3>
 				<p>Else <%# mHotActNews.NewsDate%><p>
 		    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(mHotElseNews.NewsText),800)%></p>
 		    </div>

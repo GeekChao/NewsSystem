@@ -14,5 +14,9 @@ namespace NewsSystem {
 	public partial class newsManage {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
+		
+		protected System.Web.UI.WebControls.Repeater repNewsManage;
+		
+		protected System.Web.UI.WebControls.LinkButton delteBtn;
 	}
 }
