@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">
         tinymce.init({
             selector: "#mTextArea",
@@ -22,7 +22,7 @@
 		<div class="container">
 			<div class="row">
 		        <div class="col-md-12">
-		          <img class="img-responsive" src="../images/suny_logo.png">
+		          <img class="img-responsive" src="images/suny_logo.png">
 		        </div>
 		    </div>
 		    <div class="row">
@@ -52,7 +52,7 @@
 			</div>
 		    <div class="row">
 			    <div class="col-md-10">
-					<textarea id="mytextarea">Easy! You should check out MoxieManager!</textarea>
+					<textarea id="mTextArea">Easy! You should check out MoxieManager!</textarea>
 			    </div>
 		    </div>
 		    <div class="row">
