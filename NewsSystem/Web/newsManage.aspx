@@ -50,7 +50,7 @@
 			    	</div>
 			    	<div class="col-md-4">
 			    		<br>
-			    		<a href='./admin/updateNews.aspx?newsId=<%#Eval("news_id")%>'>
+			    		<a href='./admin/updateNews.aspx?newsId=<%#Eval("news_id")%>' target="_blank">
 			    		<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modify</a>
 			    		&nbsp;&nbsp;&nbsp;
 						<asp:LinkButton id="delteBtn" class="button" runat="server" OnClick="deleteNewsBtnClick" CommandArgument='<%#Eval("news_id")%>'>
