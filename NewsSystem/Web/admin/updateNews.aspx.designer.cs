@@ -14,5 +14,13 @@ namespace NewsSystem {
 	public partial class updateNews {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
+		
+		protected System.Web.UI.WebControls.RadioButton radAct;
+		
+		protected System.Web.UI.WebControls.RadioButton radAca;
+		
+		protected System.Web.UI.WebControls.RadioButton radElse;
+		
+		protected System.Web.UI.HtmlControls.HtmlTextArea mTextArea;
 	}
 }

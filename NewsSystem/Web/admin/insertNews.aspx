@@ -9,8 +9,8 @@
     <script type="text/javascript">
         tinymce.init({
             selector: "#mTextArea",
-            plugins: ["image autosave"],
-            toolbar: "insertfile undo redo | sizeselect | bold italic | fontselect |  fontsizeselect | link image",
+            plugins: ["autosave"],
+            toolbar: "insertfile undo redo | sizeselect | bold italic | fontselect |  fontsizeselect",
             fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
             height: "270",
         });
@@ -47,6 +47,15 @@
 					<asp:RadioButton id="radAct" runat="server"  Text=" Activity" Checked="true" GroupName="Category"/>&nbsp;&nbsp;
 					<asp:RadioButton id="radAca" runat="server"  Text=" Academic" GroupName="Category"/>&nbsp;&nbsp;
 					<asp:RadioButton id="radElse" runat="server" Text=" Else" GroupName="Category"/>
+		    	</div>
+		    	<br><br><br>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+   					 <h4><span class="label label-info">&nbsp;Image Name&nbsp;</span></h4>
+				</div>
+				<div class="col-md-8">
+				    <input type="text" class="form-control" id="img" name="img">
 		    	</div>
 		    	<br><br><br>
 			</div>

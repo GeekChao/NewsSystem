@@ -5,8 +5,6 @@ namespace NewsSystem
 {
 	public class ProcessData
 	{
-		private static String str;
-
 		public static string StringTruncat(string oldStr, int maxLength, string endWith)//新闻标题截取指定长度汉字超出部分以“...”代替
 		{
 			if (string.IsNullOrEmpty(oldStr))
@@ -38,13 +36,6 @@ namespace NewsSystem
 			Regex regex = new Regex(@"<[^>]+>|</[^>]+>");
 			stroutput = regex.Replace(stroutput, "");
 			return stroutput;
-		}
-
-		public static string getImgSrcFromHtml(string strhtml)
-		{
-			HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-			doc.LoadHtml(strhtml);
-			return doc.DocumentNode.SelectSingleNode ("//img").Attributes ["src"].Value;
 		}
 
 		public static String getFormatedDateTime()

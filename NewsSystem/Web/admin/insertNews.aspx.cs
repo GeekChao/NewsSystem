@@ -8,6 +8,7 @@ namespace NewsSystem
 	public partial class insertNews : System.Web.UI.Page
 	{
 		private News mNews = new News();
+		private const String IMG_BASE_PATH = "images/";
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -23,11 +24,10 @@ namespace NewsSystem
 			} else if (radElse.Checked) {
 				mNews.NewsCateId = Category.ELSE;
 			}
+			mNews.NewsImgUrl = IMG_BASE_PATH +  Request.Form ["img"];
 			mNews.NewsDate = ProcessData.getFormatedDateTime ();
 			mNews.NewsText = mTextArea.InnerText;
-			mNews.NewsImgUrl = ProcessData.getImgSrcFromHtml(mNews.NewsText);
-			Console.Write (mNews.toString());
-			//new NewsDAO ().insertNews (mNews);
+			new NewsDAO ().insertNews (mNews);
 		}
 	}
 }

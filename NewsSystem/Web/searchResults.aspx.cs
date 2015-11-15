@@ -13,11 +13,8 @@ namespace NewsSystem
 		{
 			if(!IsPostBack){
 				searchText = Request.QueryString["search"]; 
-				//Response.Write (searchText);
-				String sql = "SELECT * FROM News WHERE news_title LIKE '%" + searchText + "%';";
 				NewsDAO mNewsDAO = new NewsDAO ();
-				mNewsDAO.searchNews (sql, repSearchResult);
-				//this.DataBind ();
+				mNewsDAO.searchNews (searchText, repSearchResult);
 			}
 		}
 

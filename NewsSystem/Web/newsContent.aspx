@@ -31,11 +31,11 @@
 		    	<p><%# mNews.NewsDate%></p>
 		    </div>
 		</div>
-	<!--	<div class="row">
+	    <div class="row">
 		   <div class="col-md-12">
 		   		<img class="img-responsive img-max" src="<%# mNews.NewsImgUrl%>">
 		   </div>
-		</div> -->
+		</div> 
 		<div class="row">
 		   <div class="col-md-12">
 		   		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# mNews.NewsText%></p>

@@ -17,19 +17,16 @@ namespace NewsSystem
 
 		public void initNewsManage()
 		{
-			String sql = "SELECT * FROM News ORDER BY news_date;";
 			NewsDAO mNewsDAO = new NewsDAO ();
-			mNewsDAO.selectAll (sql, repNewsManage);	
+			mNewsDAO.selectAll (repNewsManage);	
 		}
 
 		public void deleteNewsBtnClick(object sender, EventArgs e)
 		{
 			String id = ((LinkButton)sender).CommandArgument;
-			String sql = "DELETE FROM NEWS WHERE news_id = " + id + ";";
 			NewsDAO mNewsDAO = new NewsDAO ();
-			mNewsDAO.deleteByID (sql, repNewsManage);
+			mNewsDAO.deleteByID (id, repNewsManage);
 			initNewsManage ();
-
 		}
 
 		public void addNewsBtnClick(object sender, EventArgs e)

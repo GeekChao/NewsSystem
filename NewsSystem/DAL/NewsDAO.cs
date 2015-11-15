@@ -11,6 +11,7 @@ namespace NewsSystem
 		private IDbConnection mDbcon;
 		private IDbCommand mDbcmd;
 		private IDataReader mReader;
+		private String sql;
 
 		public NewsDAO ()
 		{
@@ -32,7 +33,6 @@ namespace NewsSystem
 				mNews.NewsImgUrl = (String)mReader["news_img_url"];
 				mNews.NewsCateId = (ushort)mReader["news_cate_id"];
 			}
-			//Console.Write (mNews.toString());
 			cleanUp ();
 		}
 
@@ -46,19 +46,21 @@ namespace NewsSystem
 			cleanUp ();
 		}
 
-		public void selectAll(String sql, Repeater rep)
+		public void selectAll(Repeater rep)
 		{
+			sql = "SELECT * FROM News ORDER BY news_date DESC;";
 			bindReapter (sql, rep);
 		}
 
-		public void searchNews(String sql, Repeater rep)
+		public void searchNews(String text, Repeater rep)
 		{
+			sql = "SELECT * FROM News WHERE news_title LIKE '%" + text + "%';";
 			bindReapter (sql, rep);
 		}
 
 		public void selectHotNews(String category, News mNews)
 		{
-			String sql = "SELECT * FROM News INNER JOIN Comment ON com_news_id = news_id INNER JOIN Category C1 ON cate_id = news_cate_id WHERE cate_name = '";
+			sql = "SELECT * FROM News INNER JOIN Comment ON com_news_id = news_id INNER JOIN Category C1 ON cate_id = news_cate_id WHERE cate_name = '";
 			switch (category) 
 			{
 			case News.ACTIVITY:
@@ -78,33 +80,53 @@ namespace NewsSystem
 			}
 		}
 
-		public void selectByID(String sql, News mNews)
+		public void selectByID(String id, News mNews)
 		{
+			sql = "SELECT * FROM News WHERE news_id = " + id + ";";
 			exectueQuery (sql, mNews);
 		}
 
-		public void deleteByID(String sql, Repeater rep)
+		public void deleteByID(String id, Repeater rep)
 		{
+			sql = "DELETE FROM NEWS WHERE news_id = " + id + ";";
 			bindReapter (sql, rep);
 		}
 
-		public void updateByID(String sql)
+		public void updateByID(String id, int type)
 		{
+			if (type == Comment.THUMBUP) {
+				sql = "UPDATE Comment SET thumb_num = thumb_num + 1 WHERE com_news_id = " + id + ";";
+			} else if (type == Comment.THUMBDOWN) {
+				sql = "UPDATE Comment SET thumb_num = thumb_num - 1 WHERE com_news_id = " + id + ";";
+			}
+
 			mDbcmd = mDbcon.CreateCommand ();
 			mDbcmd.CommandText = sql;
 			mReader = mDbcmd.ExecuteReader ();
 			cleanUp ();
 		}
-	/*	INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) 
-		VALUES('DIWALI-The Festival of Lights', '2015-11-04 17:27:58', 'Diwali, one of the most important holidays on the Hindu calendar, is a time of reflection and contemplation of the past year, and a celebration of the new year to come. A festival of lights lasting five days, Diwali represents the triumph of good over evil and light over darkness. Holiday traditions include the lighting of special lamps and candles through the night, and the exchanging of gifts (usually sweets) to relatives and neighbors, wearing new clothes and lighting firecrackers.
-			It is an official holiday in India, Nepal, Sri Lanka, Trinidad and Tobago, Malaysia and Singapore.
-			My best wishes to you and your family for a new year filled with good health, happiness and prosperity. Happy Diwali to all, and may you join ISA members and friends on Friday, Nov. 13 at 6:00 pm in Kunsela Lecture Hall and Rm A129, for an evening of Indian singing, dancing, food, and celebration.',
-			'images/Diwali.png', 1);  */
+//		UPDATE NEWS SET news_title = 'Gethods with ApplicatioScience and Education '
+//			WHERE news_id = 6;
+		public void updateNews(News mNews)
+		{
+			sql = " UPDATE NEWS SET news_title = '" + mNews.NewsTitle + "', "
+				+ "news_date = '" + mNews.NewsDate + "', "
+				+ "news_img_url = '" + mNews.NewsImgUrl + "', "
+				+ "news_text = '" + mNews.NewsText + "', "
+				+ "news_cate_id = " + mNews.NewsCateId + " "
+				+ "WHERE news_id = " + mNews.NewsId + ";"; 
+			Console.Write (sql);
+			mDbcmd = mDbcon.CreateCommand ();
+			mDbcmd.CommandText = sql;
+			mReader = mDbcmd.ExecuteReader ();
+			cleanUp();
+		}
+
 		public void insertNews(News mNews)
 		{	
-			String sql = "INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) VALUES('"
-			             + mNews.NewsTitle + " ', ' " + mNews.NewsDate + " ', ' " + mNews.NewsText + " ', ' " + mNews.NewsImgUrl
-						 + " ', " + mNews.NewsCateId + " ); ";
+			sql = "INSERT INTO News(news_title, news_date, news_text, news_img_url, news_cate_id) VALUES('"
+			             + mNews.NewsTitle + "', '" + mNews.NewsDate + "', '" + mNews.NewsText + "', '" + mNews.NewsImgUrl
+						 + "', " + mNews.NewsCateId + " );";
 			mDbcmd = mDbcon.CreateCommand ();
 			mDbcmd.CommandText = sql;
 			mReader = mDbcmd.ExecuteReader ();
