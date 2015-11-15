@@ -27,7 +27,7 @@ namespace NewsSystem
 			while (mReader.Read ()) {
 				mNews.NewsId = (ushort)mReader["news_id"];
 				mNews.NewsTitle = (String)mReader["news_title"];
-				mNews.NewsDate = (DateTime)mReader["news_date"];
+				mNews.NewsDate = Convert.ToString((DateTime)mReader["news_date"]);
 				mNews.NewsText = (String)mReader["news_text"];
 				mNews.NewsImgUrl = (String)mReader["news_img_url"];
 				mNews.NewsCateId = (ushort)mReader["news_cate_id"];

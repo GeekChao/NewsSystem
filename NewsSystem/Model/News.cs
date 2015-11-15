@@ -9,7 +9,7 @@ namespace NewsSystem
 		public const String ELSE = "Else";
 		private int newsId;
 		private String newsTitle;
-		private DateTime newsDate;
+		private String newsDate;
 		private String newsText;
 		private String newsImgUrl;
 		private int newsCateId;
@@ -18,7 +18,7 @@ namespace NewsSystem
 		{
 		}
 
-		public News (int newsId, String newsTitle, DateTime newsDate, String newsText, String newsImgUrl, int newsCateId)
+		public News (int newsId, String newsTitle, String newsDate, String newsText, String newsImgUrl, int newsCateId)
 		{
 			this.newsId = newsId;
 			this.newsTitle = newsTitle;
@@ -40,7 +40,7 @@ namespace NewsSystem
 			set{newsTitle = value;}
 		}
 
-		public DateTime NewsDate
+		public String NewsDate
 		{
 			get{return newsDate;}
 			set{newsDate = value;}

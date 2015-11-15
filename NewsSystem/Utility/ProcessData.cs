@@ -47,9 +47,9 @@ namespace NewsSystem
 			return doc.DocumentNode.SelectSingleNode ("//img").Attributes ["src"].Value;
 		}
 
-		public static DateTime getFormatedDateTime()
+		public static String getFormatedDateTime()
 		{
-			return Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+			return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		}
 	}
 }
