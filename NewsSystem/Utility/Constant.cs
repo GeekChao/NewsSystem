@@ -12,6 +12,8 @@ namespace NewsSystem
 		//Comment Type
 		public const int THUMBUP = 1;
 		public const int THUMBDOWN = -1;
+		//ThumbNum
+		public const int THUMBNUM = 0;
 
 		//News
 		public const String NEWSACTIVITY = "Activity";

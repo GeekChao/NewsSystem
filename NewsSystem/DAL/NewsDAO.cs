@@ -129,6 +129,13 @@ namespace NewsSystem
 			mDbcmd.CommandText = sql;
 			mReader = mDbcmd.ExecuteReader ();
 			cleanUp();
+			//init comments associated with the news. Assuming no same title !!!!!!!! Using trigger in the future.
+			sql ="INSERT INTO Comment(thumb_num, com_news_id)" + "SELECT " 
+				+ Constant.THUMBNUM + ", " + "news_id FROM NEWS WHERE news_title = '" + mNews.NewsTitle + "';";
+			mDbcmd = mDbcon.CreateCommand ();
+			mDbcmd.CommandText = sql;
+			mReader = mDbcmd.ExecuteReader ();
+			cleanUp();
 		}
 
 		//release resources
