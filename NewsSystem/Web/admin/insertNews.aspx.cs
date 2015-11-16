@@ -18,11 +18,11 @@ namespace NewsSystem
 		{
 			mNews.NewsTitle = Request.Form["title"];
 			if (radAct.Checked) {
-				mNews.NewsCateId = Category.ACTIVITY;
+				mNews.NewsCateId = Constant.CATEACTIVITY;
 			} else if (radAca.Checked) {
-				mNews.NewsCateId = Category.ACADEMIC;
+				mNews.NewsCateId = Constant.CATEACADEMIC;
 			} else if (radElse.Checked) {
-				mNews.NewsCateId = Category.ELSE;
+				mNews.NewsCateId = Constant.CATEELSE;
 			}
 			mNews.NewsImgUrl = IMG_BASE_PATH +  Request.Form ["img"];
 			mNews.NewsDate = ProcessData.getFormatedDateTime ();

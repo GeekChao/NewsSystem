@@ -4,9 +4,6 @@ namespace NewsSystem
 {
 	public class News
 	{
-		public const String ACTIVITY = "Activity";
-		public const String ACADEMIC = "Academic";
-		public const String ELSE = "Else";
 		private int newsId;
 		private String newsTitle;
 		private String newsDate;

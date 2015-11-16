@@ -15,11 +15,11 @@ namespace NewsSystem
 		{
 				NewsDAO mNewsDAO = new NewsDAO ();
 				// get hotest activity news
-				mNewsDAO.selectHotNews (News.ACTIVITY, mHotActNews);
+			mNewsDAO.selectHotNews (Constant.NEWSACTIVITY, mHotActNews);
 				// get hotest academic news
-				mNewsDAO.selectHotNews (News.ACADEMIC, mHotAcaNews);
+			mNewsDAO.selectHotNews (Constant.NEWSACADEMIC, mHotAcaNews);
 				//get hotest else news
-				mNewsDAO.selectHotNews (News.ELSE, mHotElseNews);
+			mNewsDAO.selectHotNews (Constant.NEWSELSE, mHotElseNews);
 
 				this.DataBind ();
 		}

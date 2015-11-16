@@ -193,6 +193,7 @@
     <Compile Include="Web\admin\updateNews.aspx.designer.cs">
       <DependentUpon>updateNews.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utility\Constant.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

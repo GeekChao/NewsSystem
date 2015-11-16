@@ -9,8 +9,6 @@ namespace NewsSystem
 		private int thumbNum;
 		private DateTime comDate;
 		private int comNewsId;
-		public const int THUMBUP = 1;
-		public const int THUMBDOWN = -1;
 
 		public Comment ()
 		{

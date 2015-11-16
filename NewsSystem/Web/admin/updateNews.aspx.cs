@@ -30,17 +30,17 @@ namespace NewsSystem
 		private void setRadioBtn(int cateId)
 		{
 			switch (cateId) {
-				case Category.ACTIVITY:
+			case Constant.CATEACTIVITY:
 					radAct.Checked = true;
 					radAca.Checked = false;
 					radElse.Checked = false;
 					break;
-				case Category.ACADEMIC:
+			case Constant.CATEACADEMIC:
 					radAct.Checked = false;
 					radAca.Checked = true;
 					radElse.Checked = false;
 					break;
-				case Category.ELSE:
+			case Constant.CATEELSE:
 					radAct.Checked = false;
 					radAca.Checked = false;
 					radElse.Checked = true;
@@ -53,11 +53,11 @@ namespace NewsSystem
 		public void btnSubmitClick(object sender, EventArgs e)
 		{
 			if (radAct.Checked) {
-				mNews.NewsCateId = Category.ACTIVITY;
+				mNews.NewsCateId = Constant.CATEACTIVITY;
 			} else if (radAca.Checked) {
-				mNews.NewsCateId = Category.ACADEMIC;
+				mNews.NewsCateId = Constant.CATEACADEMIC;
 			} else if (radElse.Checked) {
-				mNews.NewsCateId = Category.ELSE;
+				mNews.NewsCateId = Constant.CATEELSE;
 			}
 
 			mNews.NewsId = Int32.Parse (mNewsId);

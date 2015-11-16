@@ -6,9 +6,6 @@ namespace NewsSystem
 	{
 		private int cateId;
 		private String cateName;
-		public const int ACTIVITY = 1;
-		public const int ACADEMIC = 2;
-		public const int ELSE = 3;
 
 		public Category (){
 			

@@ -20,12 +20,12 @@ namespace NewsSystem
 
 		public void thumbsUpBtnClick(object sender, EventArgs e)
 		{
-			mNewsDAO.updateByID (newsId, Comment.THUMBUP);
+			mNewsDAO.updateByID (newsId, Constant.THUMBUP);
 		}
 
 		public void thumbsDownBtnClick(object sender, EventArgs e)
 		{
-			mNewsDAO.updateByID (newsId, Comment.THUMBDOWN);
+			mNewsDAO.updateByID (newsId, Constant.THUMBDOWN);
 		}
 	}
 }

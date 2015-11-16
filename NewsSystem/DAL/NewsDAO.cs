@@ -63,16 +63,16 @@ namespace NewsSystem
 			sql = "SELECT * FROM News INNER JOIN Comment ON com_news_id = news_id INNER JOIN Category C1 ON cate_id = news_cate_id WHERE cate_name = '";
 			switch (category) 
 			{
-			case News.ACTIVITY:
-				sql = sql + News.ACTIVITY + "' ORDER BY thumb_num DESC LIMIT 1;";
+			case Constant.NEWSACTIVITY:
+				sql = sql + Constant.NEWSACTIVITY + "' ORDER BY thumb_num DESC LIMIT 1;";
 				exectueQuery (sql, mNews);
 				break;
-			case News.ACADEMIC:
-				sql = sql + News.ACADEMIC +  "' ORDER BY thumb_num DESC LIMIT 1;";
+			case Constant.NEWSACADEMIC:
+				sql = sql + Constant.NEWSACADEMIC +  "' ORDER BY thumb_num DESC LIMIT 1;";
 				exectueQuery (sql, mNews);
 				break;
-			case News.ELSE:
-				sql = sql + News.ELSE +  "' ORDER BY thumb_num DESC LIMIT 1;";
+			case Constant.NEWSELSE:
+				sql = sql + Constant.NEWSELSE +  "' ORDER BY thumb_num DESC LIMIT 1;";
 				exectueQuery (sql, mNews);
 				break;
 			default:
@@ -94,9 +94,9 @@ namespace NewsSystem
 
 		public void updateByID(String id, int type)
 		{
-			if (type == Comment.THUMBUP) {
+			if (type == Constant.THUMBUP) {
 				sql = "UPDATE Comment SET thumb_num = thumb_num + 1 WHERE com_news_id = " + id + ";";
-			} else if (type == Comment.THUMBDOWN) {
+			} else if (type == Constant.THUMBDOWN) {
 				sql = "UPDATE Comment SET thumb_num = thumb_num - 1 WHERE com_news_id = " + id + ";";
 			}
 
