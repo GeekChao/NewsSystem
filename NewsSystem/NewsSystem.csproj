@@ -56,7 +56,6 @@
     <Content Include="Web\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Web\images\suny_logo.png" />
     <Content Include="Web\newsContent.aspx" />
-    <Content Include="Web\newsManage.aspx" />
     <Content Include="Web\js\tinymce\tinymce.min.js" />
     <Content Include="Web\js\tinymce\plugins\advlist\plugin.min.js" />
     <Content Include="Web\js\tinymce\plugins\anchor\plugin.min.js" />
@@ -139,6 +138,7 @@
     <Content Include="Web\images\Diwali.png" />
     <Content Include="Web\admin\insertNews.aspx" />
     <Content Include="Web\admin\updateNews.aspx" />
+    <Content Include="Web\admin\newsManage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -168,12 +168,6 @@
     <Compile Include="Web\NewsContent.aspx.designer.cs">
       <DependentUpon>newsContent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web\newsManage.aspx.cs">
-      <DependentUpon>newsManage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Web\newsManage.aspx.designer.cs">
-      <DependentUpon>newsManage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Model\News.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Category.cs" />
@@ -194,6 +188,12 @@
       <DependentUpon>updateNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utility\Constant.cs" />
+    <Compile Include="Web\admin\newsManage.aspx.cs">
+      <DependentUpon>newsManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\admin\newsManage.aspx.designer.cs">
+      <DependentUpon>newsManage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

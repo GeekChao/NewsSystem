@@ -73,7 +73,12 @@
 		    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(mHotElseNews.NewsText),800)%></p>
 		    </div>
 	    </div>
-		<!--Modal
+
+		</div> 
+
+	</form>
+
+	<!--Modal-->
   		<div class="modal fade" id="myModal" role="dialog">
 	    	<div class="modal-dialog">
 		      <div class="modal-content">
@@ -85,22 +90,18 @@
 		          <form role="form">
 		            <div class="form-group">
 		              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-		              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+		              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
 		            </div>
 		            <div class="form-group">
 		              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-		              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+		              <input type="password" class="form-control" id="psw" placeholder="Enter password">
 		            </div>		    
-		              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+		              <button type="button" class="btn btn-success btn-block" onclick="checkInfo()"><span class="glyphicon glyphicon-off"></span> Login</button>
 		          </form>
 			        </div>
 		      	  </div>
 			   </div>
 		  	</div> 
-		  	-->
-		</div> 
-
-	</form>
 </body>
 </html>
 

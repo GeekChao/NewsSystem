@@ -31,7 +31,7 @@ namespace NewsSystem
 
 		public void addNewsBtnClick(object sender, EventArgs e)
 		{
-			Response.Redirect ("./admin/insertNews.aspx");
+			Response.Redirect ("insertNews.aspx");
 		}
 
 		public static string StringTruncat(string oldStr, int maxLength, string endWith)//新闻标题截取指定长度汉字超出部分以“...”代替

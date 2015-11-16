@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<title>News Manage</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 		<div class="container">
 		<div class="row">
 	        <div class="col-md-12">
-	          <img class="img-responsive" src="images/suny_logo.png">
+	          <img class="img-responsive" src="../images/suny_logo.png">
 	        </div>
 	    </div>
 	    <div class="row">
@@ -50,7 +50,7 @@
 			    	</div>
 			    	<div class="col-md-4">
 			    		<br>
-			    		<a href='./admin/updateNews.aspx?newsId=<%#Eval("news_id")%>' target="_blank">
+			    		<a href='updateNews.aspx?newsId=<%#Eval("news_id")%>' target="_blank">
 			    		<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modify</a>
 			    		&nbsp;&nbsp;&nbsp;
 						<asp:LinkButton id="delteBtn" class="button" runat="server" OnClick="deleteNewsBtnClick" CommandArgument='<%#Eval("news_id")%>'>
