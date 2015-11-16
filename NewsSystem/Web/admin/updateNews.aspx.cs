@@ -7,16 +7,18 @@ namespace NewsSystem
 	
 	public partial class updateNews : System.Web.UI.Page
 	{
-		private String mNewsId;
+		private static String mNewsId;
 		public News mNews = new News();
 		private const String IMG_BASE_PATH = "images/";
 
 		protected void Page_Load()
 		{
-			mNewsId = Request.QueryString ["newsId"];
-			new NewsDAO ().selectByID (mNewsId, mNews);
-			setRadioBtn (mNews.NewsCateId);
-			this.DataBind ();
+			if (!Page.IsPostBack) {
+				mNewsId = Request.QueryString ["newsId"];
+				new NewsDAO ().selectByID (mNewsId, mNews);
+				setRadioBtn (mNews.NewsCateId);
+				this.DataBind ();
+			}
 		}
 
 		public String setImgName(String url)
@@ -47,12 +49,9 @@ namespace NewsSystem
 					break;
 			}
 		}
-
+			
 		public void btnSubmitClick(object sender, EventArgs e)
 		{
-			mNews.NewsId = Int32.Parse (mNewsId);
-			mNews.NewsTitle = Request.Form["title"];
-
 			if (radAct.Checked) {
 				mNews.NewsCateId = Category.ACTIVITY;
 			} else if (radAca.Checked) {
@@ -61,6 +60,8 @@ namespace NewsSystem
 				mNews.NewsCateId = Category.ELSE;
 			}
 
+			mNews.NewsId = Int32.Parse (mNewsId);
+			mNews.NewsTitle = Request.Form["title"];
 			mNews.NewsImgUrl = IMG_BASE_PATH +  Request.Form["img"];
 			mNews.NewsDate = ProcessData.getFormatedDateTime ();
 			mNews.NewsText = mTextArea.InnerText;

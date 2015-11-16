@@ -105,8 +105,7 @@ namespace NewsSystem
 			mReader = mDbcmd.ExecuteReader ();
 			cleanUp ();
 		}
-//		UPDATE NEWS SET news_title = 'Gethods with ApplicatioScience and Education '
-//			WHERE news_id = 6;
+
 		public void updateNews(News mNews)
 		{
 			sql = " UPDATE NEWS SET news_title = '" + mNews.NewsTitle + "', "
@@ -115,7 +114,6 @@ namespace NewsSystem
 				+ "news_text = '" + mNews.NewsText + "', "
 				+ "news_cate_id = " + mNews.NewsCateId + " "
 				+ "WHERE news_id = " + mNews.NewsId + ";"; 
-			Console.Write (sql);
 			mDbcmd = mDbcon.CreateCommand ();
 			mDbcmd.CommandText = sql;
 			mReader = mDbcmd.ExecuteReader ();
