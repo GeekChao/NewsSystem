@@ -139,6 +139,12 @@
     <Content Include="Web\admin\insertNews.aspx" />
     <Content Include="Web\admin\updateNews.aspx" />
     <Content Include="Web\admin\newsManage.aspx" />
+    <Content Include="Web\images\CDTA.png" />
+    <Content Include="Web\images\InnovationChallengeEvent.png" />
+    <Content Include="Web\images\Math.png" />
+    <Content Include="Web\images\Social.png" />
+    <Content Include="Web\images\Starwars.png" />
+    <Content Include="Web\images\view.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
