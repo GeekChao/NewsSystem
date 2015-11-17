@@ -65,7 +65,6 @@ namespace NewsSystem
 			mNews.NewsImgUrl = IMG_BASE_PATH +  Request.Form["img"];
 			mNews.NewsDate = ProcessData.getFormatedDateTime ();
 			mNews.NewsText = mTextArea.InnerText;
-			Console.Write (mNews.toString());
 			new NewsDAO ().updateNews (mNews);
 		}
 	}

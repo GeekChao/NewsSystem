@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" Inherits="NewsSystem.newsManage" %>
+<%@ import namespace="NewsSystem"%>
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -45,7 +46,7 @@
 		    <asp:Repeater ID="repNewsManage" runat="server">       
 		    	<ItemTemplate>
 				    <div class="col-md-8">
-					    <h3><%# StringTruncat(Eval("news_title").ToString(), 55, "...") %></h3>
+					    <h3><%# ProcessData.stringTruncat(Eval("news_title").ToString(), 55, "...") %></h3>
 					    <p><%#Eval("news_date")%></p>
 			    	</div>
 			    	<div class="col-md-4">

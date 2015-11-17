@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" Inherits="NewsSystem.searchResults" %>
+<%@ import namespace="NewsSystem"%>
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -24,9 +25,9 @@
 	    	<ItemTemplate>
 			    <div class="row">
 				    <div class="col-md-12">
-				    	<h3> <a href='newsContent.aspx?newsId=<%#Eval("news_id")%>' target="_blank" title='<%#Eval("news_title")%>'><%# StringTruncat(Eval("news_title").ToString(), 80, "...") %></a></h3>
+				    	<h3> <a href='newsContent.aspx?newsId=<%#Eval("news_id")%>' target="_blank" title='<%#Eval("news_title")%>'><%# ProcessData.stringTruncat(Eval("news_title").ToString(), 80, "...") %></a></h3>
 				    	<p><%#Eval("news_date")%></p>
-				    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# GetWords(striphtml(Eval("news_text").ToString()),600)%></p>
+				    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%# ProcessData.getWords(ProcessData.stripHtml(Eval("news_text").ToString()),600)%></p>
 				    </div>
 			    </div>
 			 </ItemTemplate>
