@@ -29,13 +29,17 @@
 		a. Look through news
 		b. Make comments(Like or Dislike)
 		c. Search news(Select news)
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/user.png)
 
 	Admin:
 		a. Insert news
 		b. Update news
 		c. Delete news
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/administrator.png)
+
 
 ##Schema:
 	a. News(news_id, news_title, news_date, news_text, news_img_url, news_cate_id);
 	b. Category(cate_id, cate_name);
 	c. Comment(com_id, content, com_date, com_news_id);
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/ER.png)
