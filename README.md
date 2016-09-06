@@ -1,17 +1,28 @@
-# NewsSystem
+#NewsSystem
+##Webpage:
+	a. Index page (Each fragment displays the most popular news in the different category)
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/index.png)
 
-##Week One:
-	1. Requirements Analysis
-	2. Learn Html/Css/Js
-	3. Set up development environment
+	b. NewsContenet page (Scan news and make comments)
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/News Content.png)
 
-##Week Two
-	1. Learn C# & Asp.net
-	2. Develope News System
+	c. Search Results page
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/Search.png)
 
-##Week Three:
-	1.Test the system
-	2.Deploy the system
+	d. Login page
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/log.png)
+
+	e.NewsManage page
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/News Manage.png)
+
+	f. Insert News page
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/InsertNews.png)
+
+	g. Update News page
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/UpdateNews.png)
+
+	h. Delte page
+![alt tag](https://github.com/GeekChao/NewsSystem/blob/master/Screenshot/Delete.png)
 
 ##Role:
 	User: 
@@ -23,12 +34,6 @@
 		a. Insert news
 		b. Update news
 		c. Delete news
-
-##Webpage:
-	a. Index page
-	c. NewsContenet page
-	d. NewsManage page
-	f. Search Results page
 
 ##Schema:
 	a. News(news_id, news_title, news_date, news_text, news_img_url, news_cate_id);
